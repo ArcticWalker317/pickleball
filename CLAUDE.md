@@ -9,11 +9,11 @@ and workflow rules below so you don't step on each other.
 
 ## Who owns what
 
-| Track              | Owner                      | Owns these paths                                                                                                                |
-| ------------------ | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| **A — Vision**     | ArcticWalker317            | `src/camera/`, `src/vision/`, `src/app/Calibrate.tsx`, `src/ui/DebugOverlay.tsx`                                                |
-| **B — Game & App** | Track B owner (the friend) | `src/game/`, `src/ref/`, `src/stats/`, `src/storage/`, `src/app/{Home,Live,PostGame}.tsx`, `src/ui/{CourtDiagram,ScoreBar}.tsx` |
-| **Shared**         | both — changes need both   | `src/shared/`, `src/app/{App.tsx,router.ts}`, `src/main.tsx`, `src/index.css`, `package.json`, configs, `CLAUDE.md`, `docs/`    |
+| Track              | Owner                    | Owns these paths                                                                                                                |
+| ------------------ | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| **A — Vision**     | ArcticWalker317          | `src/camera/`, `src/vision/`, `src/app/Calibrate.tsx`, `src/ui/DebugOverlay.tsx`                                                |
+| **B — Game & App** | daedalusworkshop         | `src/game/`, `src/ref/`, `src/stats/`, `src/storage/`, `src/app/{Home,Live,PostGame}.tsx`, `src/ui/{CourtDiagram,ScoreBar}.tsx` |
+| **Shared**         | both — changes need both | `src/shared/`, `src/app/{App.tsx,router.ts}`, `src/main.tsx`, `src/index.css`, `package.json`, configs, `CLAUDE.md`, `docs/`    |
 
 - **Before editing, figure out which track the current user is on** (ask if unclear) and only edit
   that track's paths.
