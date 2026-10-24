@@ -1,3 +1,3 @@
-// Track B (game & app) — owned by Track B. See docs/PLAN.md.
+// Track B (game & app) — owned by daedalusworkshop. See docs/PLAN.md.
 // TODO: Top-down court SVG with bounce heatmap. Milestone B5.
 export {};

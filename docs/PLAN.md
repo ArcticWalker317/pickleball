@@ -46,7 +46,7 @@ processing** · **singles first** · scope = live-ref demo + tracking + post-gam
 Ownership and workflow rules are in [CLAUDE.md](../CLAUDE.md). The contract between tracks is
 `src/shared/types.ts`; Track B builds against `MockVisionSource` until real tracking is ready.
 
-| #   | Track A — Vision (ArcticWalker317)                                                            | Track B — Game & App                                                    |
+| #   | Track A — Vision (ArcticWalker317)                                                            | Track B — Game & App (daedalusworkshop)                                 |
 | --- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | 1   | Camera preview on iPhone, wake lock, HTTPS deploy                                             | `lineCall` (in / out / uncertain) + tests                               |
 | 2   | Calibration: tap 4 corners → homography → line overlay + tests                                | Side-out singles scoring + rally state machine + tests (mock events)    |
