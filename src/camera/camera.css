@@ -37,3 +37,77 @@
 .button:disabled {
   opacity: 0.6;
 }
+
+/* While marking corners the panel moves to the top (usually fence/sky above the far baseline) and
+   lets taps through to the overlay everywhere except its buttons. */
+.camera-panel.top {
+  top: 0;
+  bottom: auto;
+  padding-top: max(12px, env(safe-area-inset-top));
+  background: linear-gradient(rgba(0, 0, 0, 0.8) 60%, transparent);
+  pointer-events: none;
+}
+
+.camera-panel.top .button {
+  pointer-events: auto;
+  padding: 10px 14px;
+  font-size: 15px;
+}
+
+.camera-prompt {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.camera-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.calibration-overlay {
+  position: absolute;
+  touch-action: none;
+}
+
+.cal-line,
+.cal-net,
+.cal-bad {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.cal-line {
+  stroke: var(--accent);
+}
+
+.cal-net {
+  stroke: #fff;
+  stroke-dasharray: 6 5;
+}
+
+.cal-bad {
+  stroke: var(--danger);
+  stroke-dasharray: 4 4;
+}
+
+.cal-handle-ring {
+  fill: rgba(212, 240, 58, 0.15);
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+
+.cal-handle-dot {
+  fill: var(--accent);
+}
+
+.cal-label {
+  fill: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-anchor: middle;
+  paint-order: stroke;
+  stroke: #000;
+  stroke-width: 3px;
+}
