@@ -1,0 +1,8 @@
+# Normalize line endings to LF for everyone (Windows + macOS collaborators).
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.ico binary
+*.mp4 binary
+*.mov binary
