@@ -1,0 +1,18 @@
+node_modules
+dist
+coverage
+*.tsbuildinfo
+.env*
+.vercel
+.netlify
+
+# Test footage is shared via cloud drive, never committed.
+clips/
+*.mp4
+*.mov
+
+# Personal Claude Code settings
+.claude/settings.local.json
+
+.DS_Store
+Thumbs.db
