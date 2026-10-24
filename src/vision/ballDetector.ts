@@ -113,6 +113,11 @@ type Blob = {
 function labelBlobs(mask: Uint8Array, w: number, h: number): Blob[] {
   const blobs: Blob[] = [];
   const stack: number[] = [];
+  const visit = (q: number) => {
+    if (mask[q] !== 1) return;
+    mask[q] = 2;
+    stack.push(q);
+  };
   for (let start = 0; start < mask.length; start++) {
     if (mask[start] !== 1) continue;
     const blob: Blob = { area: 0, sumX: 0, sumY: 0, minX: w, maxX: 0, minY: h, maxY: 0 };
@@ -129,10 +134,10 @@ function labelBlobs(mask: Uint8Array, w: number, h: number): Blob[] {
       if (x > blob.maxX) blob.maxX = x;
       if (y < blob.minY) blob.minY = y;
       if (y > blob.maxY) blob.maxY = y;
-      if (x > 0 && mask[p - 1] === 1) ((mask[p - 1] = 2), stack.push(p - 1));
-      if (x < w - 1 && mask[p + 1] === 1) ((mask[p + 1] = 2), stack.push(p + 1));
-      if (y > 0 && mask[p - w] === 1) ((mask[p - w] = 2), stack.push(p - w));
-      if (y < h - 1 && mask[p + w] === 1) ((mask[p + w] = 2), stack.push(p + w));
+      if (x > 0) visit(p - 1);
+      if (x < w - 1) visit(p + 1);
+      if (y > 0) visit(p - w);
+      if (y < h - 1) visit(p + w);
     }
     blobs.push(blob);
   }
